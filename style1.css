@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+.hero {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.header {
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.header__nav a{
+    color: #838383;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.header__nav a:hover {
+    color: #000;
+    font-size: 1.3rem;
+}
+
+nav {
+    display: flex;
+    gap: 45px;
+    margin: 0 3vmin;
+}
+
+.extra {
+    width: 410px;
+    height: 80vh;
+    border: 2px solid #000;
+    position: absolute;
+    right: 0;
+    transform: translate(420px);
+}
+
+#ham:checked~.extra {
+    transform: translate(0);
+    transition: all .3s linear;
+}
+
+#ham {
+    display: none;
+}
+
+.content {
+    max-width: 1100px;
+    height: 630px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.flex {
+    width: 450px;
+    padding: 30px 50px;
+    align-self: flex-end;
+}
+
+.flex1 {
+    width: 450px;
+    display: flex;
+    align-self: flex-start;
+    padding: 0px 20px;
+}
+
+.left1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2em;
+    letter-spacing: .05em;
+}
+
+p, nav a {
+    font-size: 1.2rem;
+    line-height: 1.5em;
+    letter-spacing: .1em;
+    color: #000;
+    text-decoration: none;
+}
+
+.about {
+    max-width: 1100px;
+    height: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    gap: 40px;
+    position: relative;
+}
+
+.about-me {
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.Portfolio {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.Portfolio-flex {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact {
+    max-width: 1100px;
+    margin: 0 auto;
+    border: 1px solid black;
+     display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 60px;
+    gap: 10px;
+}
+
+.button__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.button__nav a{
+    
+}
+
+.space {
+    background-color: cyan;
+    width: 400px;
+    height: 400px;
+    perspective: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    background-color: magenta;
+    color: green;
+    font-size: 2em;
+    position: relative;
+    transform: translateZ(200px);
+    transition: transform 1s linear;
+}
+.card:hover {
+    transform: translateZ(200px) rotateY(180deg);
+}
+
+.space-cube {
+    width: 300px;
+    height: 300px;
+    perspective: 500px;
+    position: relative;
+}
+
+.cube {
+    width: inherit;
+    height: inherit;
+    transform-style: preserve-3d;
+    animation: cube-animation 6s linear infinite;
+}
+
+.side {
+    width: inherit;
+    height: inherit;
+    border: 1px solid black;
+    position: absolute;
+}
+
+.front {
+    transform: translateZ(150px);
+    background-color: #f005;
+}
+.back {
+    transform: rotateY(180deg) translateZ(150px);
+    background-color: #0f05;
+}
+.right {
+    transform: rotateY(90deg) translateZ(150px);
+    background-color: #ff05;
+}
+.left {
+    transform: rotateY(-90deg) translateZ(150px);
+    background-color: #0ff5;
+}
+.bottom {
+    transform: rotateX(-90deg) translateZ(150px);
+    background-color: #00f5;
+}
+.top {
+    transform: rotateX(90deg) translateZ(150px);
+    background-color: #f0f5;
+}
+
+
+@keyframes cube-animation {
+    from {
+        transform: rotateY(360deg) rotateX(0deg);
+    }
+    to   {
+        transform: rotateY(0deg) rotateX(-360deg);
+    }
+}
+
+.background {
+    position: absolute;
+    bottom: -700px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: blur(20px);
+}
+

@@ -1,0 +1,243 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(./fonts/Montserrat-Bold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+    font-family: Montserrat, sans-serif;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.hero {
+    max-width: 1100px;   
+    padding: 60px 40px;
+}
+
+.logo {
+    text-decoration: none;
+    font-weight: 700;
+    color: #000;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    gap: 10px;
+}
+
+.content {
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 100px;
+    padding-top: 20px 20px;
+}
+
+.flex {
+    width: 450px;
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.flex1 {
+    width: 450px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    letter-spacing: .05em;
+}
+
+p, nav a {
+    font-size: 1.1rem;
+    line-height: 1.5em;
+    letter-spacing: .1em;
+    color: #000;
+    text-decoration: none;
+    gap: 10px;
+}
+
+.but {
+    background-color: #ff6861;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 60px;
+}
+
+.but1 {
+    background-color: #ff6861;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 60px;
+}
+
+.but p {
+    color: #fff;
+}
+
+.but1 p {
+    color: #fff;
+}
+
+.about {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    padding: 80px;
+    gap: 45px;
+}
+
+.about h1 {
+    padding: 40px;
+}
+
+.abouts {
+    width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about-me {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav p {
+    font-size: 1.1rem;
+    line-height: 1.8em;
+    color: #000;
+}
+
+nav h2 {
+    font-size: 2rem;
+    line-height: 1.8em;
+}
+
+.container1 {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 80px;
+    background: linear-gradient(102deg, #FFF6DF 17.38%, #FFDFDE 81.25%);
+    border-radius: 60px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px;
+}
+
+@media (max-width: 1180px) {
+    .container {
+        max-width: 960px;
+    }
+    .content {
+        gap: 60px;
+    }
+}
+
+@media (max-width: 990px) {
+    .container {
+        max-width: 720px;
+    }
+    .content {
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+    .flex {
+        align-items: center;
+        text-align: center;
+    }
+    .logo {
+        justify-content: center;
+    }
+    .container1 {
+        max-width: 720px;
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+}
+
+@media (max-width: 760px) {
+    .container {
+        max-width: 530px;
+        align-items: center;
+        justify-content: center;
+    }
+    .container1 {
+        max-width: 530px;
+        align-items: center;
+        justify-content: center;
+    }
+    .abouts {
+        max-width: 530px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+    .about-me {
+        max-width: 530px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+    #cow {
+        width: 310px;
+    }
+    #bug {
+        width: 190px;
+    }
+}
+    
+@media (max-width: 575px) {
+    .container {
+        padding: 0 15px;
+    }
+    .container1 {
+        padding: 0 15px;
+    }
+    .about-me {
+        padding: 0 15px;
+    }
+}
